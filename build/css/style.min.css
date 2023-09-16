@@ -1,0 +1,1 @@
+@font-face{font-family:"FontName";font-size:1rem;font-style:normal;font-weight:400;src:local("FileName.eot") url(FileName.woff2) format("woff2"),url(FileName.woff) format("woff")}body,main{text-align:center}body{font-size:2rem}main{background-color:#123;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
