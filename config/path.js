@@ -44,10 +44,10 @@ const path = {
         dest: pathBaseSource + `/svg`,
     },
     sprite: {
-        src: [pathBaseSource + 'svg/*',
-        '!' + pathBaseSource + 'svg/sprite.svg'],
-        watch: [pathBaseSource + 'svg/*',
-        '!' + pathBaseSource + 'svg/sprite.svg'],
+        src: [pathBaseSource + '/svg/*.*',
+        '!' + pathBaseSource + '/svg/sprite.svg'],
+        watch: [pathBaseSource + '/svg/*.*',
+        '!' + pathBaseSource + '/svg/sprite.svg'],
         dest: pathBaseSource + `/svg`,
     },
     clean: {

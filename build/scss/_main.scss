@@ -1,13 +1,42 @@
-:root {
-    $bg-color: #fdfdfd;
-    $text-color: #333;
-    $main-color: #754ef9;
-    $white-color: #fdfdfd;
-    $sahdow-color: rgba(0, 0, 0, .2);
-
+body {
+    font-family: $font-family;
+    font-size: 16px;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    padding: 0 30px;
+    max-width: 1380px;
+}
+
+.phone {
+    padding: 1em 1.5em;
+    font-size: 1.2em;
+
+    color: $text-main;
+}
+
+@media screen and (max-width: 1220px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .phone {
+        font-size: 1rem;
+        padding: .875em 1.375em;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .phone {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
 }

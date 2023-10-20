@@ -1,0 +1,152 @@
+.order {
+    margin-bottom: 160px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.175rem;
+
+    &__box {
+        padding: 1.5rem 1.5rem 3.75rem;
+        width: 430px;
+
+        border-radius: 1rem;
+        box-shadow: 3px 4px 8px 0px rgba(230, 230, 230, 0.34) inset, -2px -2px 8px 0px rgba(151, 151, 151, 0.25) inset;
+        backdrop-filter: blur(8px);
+
+        background: rgba(225, 225, 225, 0.5);
+    }
+
+    &__title {
+        margin-bottom: 43px;
+
+        font-size: 1.75rem;
+        color: $text-main;
+
+        span {
+            margin-right: 0.3125rem;
+
+            width: 51px;
+            height: 51px;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            background: #C8E2EF;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        display: flex;
+        flex-flow: column wrap;
+        gap: 5px;
+
+        font-size: 1.25rem;
+
+        color: rgba(10, 10, 10, 1);
+
+        span {
+            margin-left: 2rem;
+        }
+    }
+
+    &__select {
+        position: relative;
+
+        color: rgba(151, 151, 151, 0.9);
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            z-index: 2;
+
+            transform: translateY(-50%);
+
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #c42626 url('../svg/sprite.svg#ok') no-repeat;
+        }
+
+        &:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &>option {
+            padding: 1rem;
+        }
+    }
+
+    &__input {
+        padding: 1rem;
+
+        font-weight: 200;
+        font-size: 0.875rem;
+        height: $form-input-height;
+
+        border-radius: 1.7rem;
+        border: none;
+        outline: none;
+
+        &:hover {
+            color: #636262;
+        }
+    }
+
+    &__box-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .form__item {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        align-self: flex-end;
+
+        width: $form-input-height;
+        height: $form-input-height;
+
+        background: $blue;
+        border-radius: 50%;
+        border: none;
+    }
+
+    &__out-message {
+        height: $form-input-height;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+    }
+
+    &__radio {
+        position: relative;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: block;
+            width: 50px;
+
+            background: url('../svg/sprite.svg#form-btn');
+
+        }
+    }
+}

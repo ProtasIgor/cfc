@@ -1,0 +1,12 @@
+node_modules
+
+build/images/*
+!build/images/src
+
+build/fonts/*
+!build/fonts/src
+
+build/css
+
+build/svg/*
+!build/svg/src
