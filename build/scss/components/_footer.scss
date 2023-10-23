@@ -29,16 +29,8 @@
     }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: $media-width-max) {
     .footer {
-
-        &__logo {
-
-            img {
-                width: 173px;
-                height: 29px;
-            }
-        }
 
         &__body {
             padding-bottom: 40px;
@@ -50,6 +42,7 @@
     .footer {
 
         &__head {
+            padding-bottom: 30px;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -60,22 +53,13 @@
         }
 
         &__social {
+            margin-top: 30px;
             flex-basis: 100%;
             order: 2;
         }
 
         &__phone {
             flex-basis: auto;
-        }
-    }
-}
-
-@media (max-width: 580px) {
-    .footer {
-
-        &__logo img {
-            width: 144px;
-            height: 24px;
         }
     }
 }

@@ -1,6 +1,6 @@
 .header {
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 
     position: relative;
 
@@ -23,11 +23,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    &__logo {
-        pointer-events: none;
-        user-select: none;
     }
 
     &__phone {
@@ -69,9 +64,5 @@
     .header {
         margin-bottom: 50px;
 
-        &__logo img{
-            width: 144px;
-            height: 24px;
-        }
     }
 }

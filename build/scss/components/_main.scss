@@ -5,8 +5,8 @@
         position: relative;
         color: $text-main;
 
-        background: url('../images/src/mobile-app.avif') no-repeat right;
-        background: url('../images/src/mobile-app.webp') no-repeat right;
+        /* background: url('../images/mobile-app.avif') no-repeat right;
+        background: url('../images/src/mobile-app.webp') no-repeat right; */
         background: url('../images/src/mobile-app.png') no-repeat right;
         background-size: contain;
 
@@ -31,7 +31,7 @@
     &__title {
         margin-bottom: 1.1875rem;
 
-        max-width: 565px;
+        max-width: 590px;
 
         text-transform: uppercase;
         font-size: 3rem;
@@ -85,24 +85,123 @@
         }
     }
 
-    &__button {
-        padding: 1.5625rem 3.625rem 1.6875rem;
+    &__message {
+        padding: 12px 24px;
 
-        background: $blue;
-        font-size: 1.5rem;
-        border: none;
-        border-radius: 4rem;
-        color: $text-second;
+        position: absolute;
 
-        &:hover {
-            cursor: pointer;
-            transition: all .3s linear;
+        max-width: 255px;
+
+        border-radius: 17px;
+        background: lightgray 0% 0% / 12.554958462715149px 12.554958462715149px repeat, rgba(225, 225, 225, 0.50);
+        box-shadow: 3px 4px 8px 0px rgba(247, 247, 247, 0.34) inset, -4px -4px 8px 0px rgba(187, 187, 187, 0.25) inset;
+        backdrop-filter: blur(8px);
+    }
+
+    &__message--first {
+        top: 17%;
+        right: 24%;
+    }
+
+    &__message--second {
+        top: 79%;
+        right: 5%;
+    }
+
+    &__message-header {
+        margin-bottom: 10px;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            margin-bottom: 2px;
+
+            font-size: 12px;
+            color: #323232;
+        }
+
+        span {
+            font-size: 8px;
+            color: #d0d0d0;
         }
     }
+
+    &__message-content {
+        margin-bottom: 4px;
+        padding: 9px 13px;
+
+        position: relative;
+        //width: 130px;
+
+        background: #27B3FFB8;
+        border-radius: 17px;
+
+        font-size: 12px;
+        color: $text-second;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            bottom: -6px;
+            left: 10%;
+
+            width: 6px;
+            height: 6px;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 100%;
+            border-bottom-left-radius: 8%;
+            background: #27B3FFB8;
+        }
+    }
+
+    &__timer {
+
+        position: absolute;
+        top: 43%;
+        right: 27%;
+
+        width: 89px;
+        height: 89px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: rgba(225, 225, 225, 0.50);
+        box-shadow: 3px 4px 8px 0px rgba(247, 247, 247, 0.34) inset,
+            -4px -4px 8px 0px rgba(187, 187, 187, 0.25) inset;
+        backdrop-filter: blur(8px);
+
+        border-radius: 50%;
+        font-size: 10px;
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
 }
 
-/* @media screen and (max-width: 1000px) { */
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: $media-width-max) {
     .main {
 
         &__inner {
@@ -131,21 +230,74 @@
             margin-bottom: 1.6875rem;
 
             &-item {
-                //padding: 0.6875rem 1rem;
                 width: 227px;
-
             }
         }
 
-        &__button {
-            padding: 1.5625rem 4.5625rem;
-            font-size: 1.125rem;
+        &__message {
+            padding: 9px 10px 13px;
+
+            max-width: 190px;
+        }
+
+        &__message--first {
+            top: 10%;
+            right: 33%;
+        }
+
+        &__message--second {
+            top: 68%;
+            right: 4%;
+        }
+
+        &__message-header {
+            margin-bottom: 10px;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 34px;
+                height: 34px;
+
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 9px;
+            }
+
+            span {
+                font-size: 6px;
+            }
+        }
+
+        &__message-content {
+            font-size: 9px;
+        }
+
+        &__timer {
+            top: 48%;
+            right: 35%;
+
+            width: 65px;
+            height: 65px;
+
+            font-size: 7px;
+
+            svg {
+                width: 26px;
+                height: 26px;
+            }
         }
     }
 }
 
 @media (max-width: 959px) {
     .main {
+        margin-bottom: 80px;
 
         &__inner {
             background-size: auto;
@@ -160,7 +312,7 @@
         }
 
         &__text {
-            margin-bottom: 27rem;
+            margin-bottom: 28rem;
         }
 
         &__list {
@@ -186,6 +338,23 @@
                 flex-shrink: 0;
             }
         }
+
+        &__message--first {
+            top: 27%;
+            right: auto;
+            left: 10%;
+        }
+
+        &__message--second {
+            top: 60%;
+            right: 10%;
+        }
+
+        &__timer {
+            right: auto;
+            top: 47%;
+            left: 30%;
+        }
     }
 }
 
@@ -197,12 +366,49 @@
         }
 
         &__text {
+            margin-bottom: 28rem;
             font-size: .9rem;
         }
 
-        &__button {
-            padding: auto;
-            width: 100%;
+        &__message-header {
+            margin-bottom: 10px;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 0.48rem;
+            }
+
+            span {
+                font-size: 0.32rem;
+            }
+        }
+
+        &__message-content {
+            padding: 7px 15px;
+
+            font-size: 0.48rem;
+        }
+
+        &__timer {
+            right: auto;
+            top: 47%;
+            left: 30%;
+
+            svg {
+                width: 26px;
+                height: 26px;
+            }
         }
     }
 }

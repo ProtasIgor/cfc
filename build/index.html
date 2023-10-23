@@ -17,7 +17,7 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a class="header__logo" href="#">
+                <a class="header__logo logo" href="" target="_blank">
                     <img src="images/src/logo.png" alt="site-logo" fetchpriority="high">
                 </a>
                 <a class="header__phone phone" href="tel:+375298883222">+375 (29) 888-32-22</a>
@@ -28,7 +28,7 @@
         <div class="container">
             <div class="main__inner">
                 <div class="main__content">
-                    <h1 class="main__title">ПОМОГАЕМ ПОЛУЧИТЬ<br>КРЕДИТ БЫСТРЕЕ,<br>ПРОЩЕ И Выгоднее</h1>
+                    <h1 class="main__title">ПОМОГАЕМ&nbsp;ПОЛУЧИТЬ<br>КРЕДИТ БЫСТРЕЕ,<br>ПРОЩЕ И Выгоднее</h1>
                     <p class="main__text">Получите выгодные предложения<br>по кредиту прямо сейчас</p>
                     <ul class="main__list">
                         <li class="main__list-item">
@@ -44,12 +44,42 @@
                             <p class="main__list-text main__list-text--biggest">Одобрение кредита за 30 минут</p>
                         </li>
                     </ul>
-                    <button class="main__button" onclick="alert('Cool!')">Подобрать кредит</button>
+                    <div class="button">
+                        <div class="button__background"></div>
+                        <button class="button__header">Подобрать кредит</button>
+                    </div>
+                </div>
+                <div class="main__message main__message--first">
+                    <div class="main__message-header">
+                        <img src="images/client-picture.png" alt="" fetchpriority="high">
+                        <div>
+                            <p>Клиент</p>
+                            <span>30 мин.</span>
+                        </div>
+                    </div>
+                    <div class="main__message-content">Банк не одобряет мне кредит, можете мне помочь?</div>
+                </div>
+                <div class="main__message main__message--second">
+                    <div class="main__message-header">
+                        <img src="images/main-cfc-label.png" alt="" fetchpriority="high">
+                        <div>
+                            <p>Центр Финансовых консультаций</p>
+                            <span>1 мин.</span>
+                        </div>
+                    </div>
+                    <div class="main__message-content">Вам одобрен кредит на сумму<br>9 000 руб. с процентной ставкой
+                        9,9%</div>
+                </div>
+                <div class="main__timer">
+                    <svg>
+                        <use xlink:href="svg/sprite.svg#main-timer"></use>
+                    </svg>
+                    <p>30 минут</p>
                 </div>
             </div>
         </div>
     </main>
-    <!--<section class="advantage">
+    <section class="advantage">
         <div class="container">
             <div class="advantage__inner">
                 <picture class="advantage__picture">
@@ -91,7 +121,7 @@
                             <label class="form__item">
                                 <span>Сумма кредита</span>
                                 <select class="form__select form__input" name="">
-                                    <option value="" disabled selected style='display:none;'>Выбрать...</option>
+                                    <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
                                     <option value="">До 1000 руб</option>
                                     <option value="">От 1000 до 3000 руб</option>
                                     <option value="">От 3000 до 7000 руб</option>
@@ -102,7 +132,7 @@
                             <label class="form__item">
                                 <span>Срок кредита</span>
                                 <select class="form__select form__input" name="">
-                                    <option value="" disabled selected style='display:none;'>Выбрать...</option>
+                                    <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
                                     <option value="">До 1 года</option>
                                     <option value="">От 2 до 3 лет</option>
                                     <option value="">От 3 до 5 лет</option>
@@ -112,7 +142,7 @@
                             <label class="form__item">
                                 <span>Наличие работы</span>
                                 <select class="form__select form__input" name="">
-                                    <option value="" disabled selected style='display:none;'>Выбрать...</option>
+                                    <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
                                     <option value="">Да, более 3 месяцев</option>
                                     <option value="">Да, менее 3 месяцев</option>
                                     <option value="">Нет</option>
@@ -123,8 +153,8 @@
                             <div class="form__box-footer">
                                 <label class="form__item">
                                     <span>Доход</span>
-                                    <select class="form__select form__input" name="">
-                                        <option value="" disabled selected style='display:none;'>Выбрать...</option>
+                                    <select class="form__select form__select--smaller form__input" name="">
+                                        <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
                                         <option value="">Менее 1000 руб</option>
                                         <option value="">1000-2000 руб</option>
                                         <option value="">2000-3000 руб</option>
@@ -144,9 +174,33 @@
                         <div class="form__content">
                             <label class="form__item">
                                 <span>Имя</span>
-                                <input class="form__input" type="text" placeholder="Ваше имя">
+                                <input class="form__input" type="text" placeholder="Ваше имя" autocomplete="off">
                             </label>
                             <label class="form__item">
+                                <span>Где получить результат</span>
+                                <div class="form__out-message">
+                                    <input type="radio" id="form_radio1" name="messenger" value="1">
+                                    <label class="form__radio-label1" for="form_radio1">
+                                        <img src="svg/sprite.svg#form-phone" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio2" name="messenger" value="2">
+                                    <label class="form__radio-label2" for="form_radio2">
+                                        <img src="svg/sprite.svg#form-sms" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio3" name="messenger" value="3">
+                                    <label class="form__radio-label3" for="form_radio3">
+                                        <img src="svg/sprite.svg#form-telegram" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio4" name="messenger" value="4">
+                                    <label class="form__radio-label4" for="form_radio4">
+                                        <img src="svg/sprite.svg#form-whatsapp" alt="" loading="lazy" decoding="async">
+                                    </label>
+                                </div>
+                            </label>
+                            <!-- <label class="form__item">
                                 <span>Где получить результат</span>
                                 <div class="form__out-message">
                                     <input class="form__radio" type="radio" name="messenger" value="1">
@@ -154,14 +208,21 @@
                                     <input class="form__radio" type="radio" name="messenger" value="3">
                                     <input class="form__radio" type="radio" name="messenger" value="4">
                                 </div>
-                            </label>
+                            </label> -->
                             <label class="form__item">
                                 <span>Телефон</span>
-                                <input class="form__input" type="tel" name="phone" placeholder="+375(__)-___-__-__">
+                                <input class="form__input form__input--phone" type="text" name="phone" placeholder="+375(__)-___-__-__" autocomplete="off">
                             </label>
                             <div class="form__box-footer">
-                                <label><input type="radio">я принимаю условия обработки персональных данных</label>
-                                <button type="button"><img src="" alt="" loading="lazy" decoding="async"></button>
+                                <label class="form__info-radio"><input type="radio">
+                                    <div>я принимаю условия обработки персональных данных
+                                    </div>
+                                </label>
+                                <button class="form__button" type="button">
+                                    <svg width="19" height="16">
+                                        <use xlink:href="svg/sprite.svg#form-btn"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="form__box-wrapper">
@@ -194,31 +255,33 @@
                         </div>
                     </div>
                 </form>
+                <div class="order__blur order__blur--blue"></div>
+                <div class="order__blur order__blur--pink"></div>
             </div>
         </div>
-    </section>-->
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__head">
-                    <a class="footer__logo" href=""><img src="images/src/logo.png" alt="site-logo"></a>
+                    <a class="footer__logo logo" href="" target="_blank"><img src="images/src/logo.png" alt="site-logo"></a>
                     <ul class="footer__social">
                         <li>
-                            <a class="footer__link" href="" target="_blank">
+                            <a class="footer__link" href="https://www.tiktok.com/@center_credit" target="_blank">
                                 <svg width="40" height="40">
                                     <use xlink:href="svg/sprite.svg#tiktok" decoding="async" loading="lazy"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
-                            <a class="footer__link" href="" target="_blank">
+                            <a class="footer__link" href="https://www.instagram.com/center_finance" target="_blank">
                                 <svg width="40" height="40">
                                     <use xlink:href="svg/sprite.svg#instagram" decoding="async" loading="lazy"></use>
                                 </svg>
                             </a>
                         </li>
                         <li>
-                            <a class="footer__link" href="" target="_blank">
+                            <a class="footer__link" href="https://vk.com/center_finance" target="_blank">
                                 <svg width="40" height="40">
                                     <use xlink:href="svg/sprite.svg#Vk" decoding="async" loading="lazy"></use>
                                 </svg>
@@ -253,6 +316,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
