@@ -23,7 +23,7 @@ const path = {
     script: {
         src: pathBaseSource + `/js/src/index.js`,
         watch: [pathBaseSource + '/js/**/*', '!' + pathBaseSource + '/js/script.min.js'],
-        dest: pathBaseSource + `/js`,
+        dest: pathBaseSource + `/js/`,
     },
     favicon: {
         src: pathBaseSource + '/favicon/src/favicon.*',

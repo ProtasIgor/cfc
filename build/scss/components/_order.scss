@@ -40,6 +40,10 @@
 
     &__box {
         padding: 1.5rem 1.5rem 3.75rem;
+
+        display: flex;
+        flex-direction: column;
+
         width: 430px;
 
         border-radius: 1rem;
@@ -47,6 +51,36 @@
         backdrop-filter: blur(8px);
 
         background: rgba(225, 225, 225, 0.5);
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+
+    &__content--analysis {
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        //gap: 1.5rem;
+    }
+
+    &__text {
+        max-width: 320px;
+
+        text-align: center;
+        font-size: 1.25rem;
+        color: #0A0A0A;
+    }
+
+    &__text--bold {
+        margin-bottom: 3rem;
+
+        text-align: center;
+        font-size: 2rem;
     }
 
     &__title {
@@ -81,40 +115,10 @@
 
         color: rgba(10, 10, 10, 1);
 
-        span {
-            margin-left: 2rem;
-        }
     }
 
-    &__select {
-        position: relative;
-
-        color: rgba(151, 151, 151, 0.9);
-
-        &::after {
-            content: '';
-
-            position: absolute;
-            top: 50%;
-            right: 25px;
-            z-index: 2;
-
-            transform: translateY(-50%);
-
-            display: block;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #c42626 url('../svg/sprite.svg#ok') no-repeat;
-        }
-
-        &>option {
-            padding: 1rem;
-        }
-    }
-
-    &__select--smaller {
-        width: 120%;
+    span {
+        margin-left: 2rem;
     }
 
     &__input {
@@ -171,6 +175,8 @@
         background: $blue;
         border-radius: 50%;
         border: none;
+
+        cursor: pointer;
 
         svg {
             margin-left: 3px;
@@ -301,6 +307,17 @@
             width: auto;
 
             flex: 1 0 290px;
+        }
+
+        &__text {
+            max-width: 213px;
+            font-size: .85rem;
+
+        }
+
+        &__text--bold {
+            margin-bottom: 2.1575rem;
+            font-size: 1.125rem;
         }
 
         &__item {

@@ -119,9 +119,9 @@
                         <div class="form__title"><span>1</span>Расчет кредита</div>
                         <div class="form__content">
                             <label class="form__item">
-                                <span>Сумма кредита</span>
-                                <select class="form__select form__input" name="">
-                                    <option value="" disabled selected style='display:none;'>Выбрать...</option>
+                                <span form__label-text>Сумма кредита</span>
+                                <select class="form__select" id="form__select--sum" name="">
+                                    <option class="option-default" value="" disabled selected style='display:none;'>Выбрать...</option>
                                     <option value="">До 1000 руб</option>
                                     <option value="">От 1000 до 3000 руб</option>
                                     <option value="">От 3000 до 7000 руб</option>
@@ -130,8 +130,8 @@
                                 </select>
                             </label>
                             <label class="form__item">
-                                <span>Срок кредита</span>
-                                <select class="form__select form__input" name="">
+                                <span form__label-text>Срок кредита</span>
+                                <select class="form__select" id="form__select--time" name="">
                                     <option value="" disabled selected style='display:none;'>Выбрать...</option>
                                     <option value="">До 1 года</option>
                                     <option value="">От 2 до 3 лет</option>
@@ -140,8 +140,8 @@
                                 </select>
                             </label>
                             <label class="form__item">
-                                <span>Наличие работы</span>
-                                <select class="form__select form__input" name="">
+                                <span form__label-text>Наличие работы</span>
+                                <select class="form__select" id="form__select--work" name="">
                                     <option value="" disabled selected style='display:none;'>Выбрать...</option>
                                     <option value="">Да, более 3 месяцев</option>
                                     <option value="">Да, менее 3 месяцев</option>
@@ -152,8 +152,8 @@
                             </label>
                             <div class="form__box-footer">
                                 <label class="form__item">
-                                    <span>Доход</span>
-                                    <select class="form__select form__select--smaller form__input" name="">
+                                    <span form__label-text>Доход</span>
+                                    <select class="form__select form__select--smaller" id="form__select--smaller" name="">
                                         <option value="" disabled selected style='display:none;'>Выбрать...</option>
                                         <option value="">Менее 1000 руб</option>
                                         <option value="">1000-2000 руб</option>
@@ -173,11 +173,12 @@
                         <div class="form__title"><span>2</span>Результат расчета</div>
                         <div class="form__content">
                             <label class="form__item">
-                                <span>Имя</span>
-                                <input class="form__input" type="text" placeholder="Ваше имя" autocomplete='off'>
+                                <span class="form__label-text">Имя</span>
+                                <input class="form__input" type="text" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-я]{3,32}" autocomplete='off'
+                                >
                             </label>
                             <label class="form__item">
-                                <span>Где получить результат</span>
+                                <span form__label-text>Где получить результат</span>
                                 <div class="form__out-message">
                                     <input type="radio" id="form_radio1" name="messenger" value="1">
                                     <label class="form__radio-label1" for="form_radio1">
@@ -200,19 +201,10 @@
                                     </label>
                                 </div>
                             </label>
-                            <!-- <label class="form__item">
-                                <span>Где получить результат</span>
-                                <div class="form__out-message">
-                                    <input class="form__radio" type="radio" name="messenger" value="1">
-                                    <input class="form__radio" type="radio" name="messenger" value="2">
-                                    <input class="form__radio" type="radio" name="messenger" value="3">
-                                    <input class="form__radio" type="radio" name="messenger" value="4">
-                                </div>
-                            </label> -->
                             <label class="form__item">
-                                <span>Телефон</span>
+                                <span form__label-text>Телефон</span>
                                 <input class="form__input form__input--phone" type="text" name="phone"
-                                    placeholder="+375(__)-___-__-__" autocomplete='off'>
+                                     autocomplete='off' placeholder="+375 (29) 719-85-85">
                             </label>
                             <div class="form__box-footer">
                                 <label class="form__info-radio"><input type="radio">
@@ -237,11 +229,11 @@
                     </div>
                     <div class="form__box">
                         <div class="form__title"><span>3</span>Анализ данных</div>
-                        <div class="form__content">
+                        <div class="form__content form__content--analysis">
                             <picture>
-                                <source srcset="" type="image/avif">
-                                <source srcset="" type="image/webp">
-                                <img src="" alt="" decoding="async" loading="lazy">
+                                <source srcset="images/form-submit.avif" type="image/avif">
+                                <source srcset="images/form-submit.webp" type="image/webp">
+                                <img src="images/src/form-submit.png" alt="" decoding="async" loading="lazy">
                             </picture>
                             <p class="form__text form__text--bold">Заявка отправлена</p>
                             <p class="form__text">Чтобы узнать результат, заполните контактные данные</p>
@@ -290,7 +282,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="footer__link" href="" target="_blank">
+                            <a class="footer__link" href="https://ok.ru/centerfinance" target="_blank">
                                 <svg width="40" height="40">
                                     <use xlink:href="svg/sprite.svg#ok" decoding="async" loading="lazy"></use>
                                 </svg>
