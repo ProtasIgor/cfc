@@ -51,9 +51,14 @@
         backdrop-filter: blur(8px);
 
         background: rgba(225, 225, 225, 0.5);
+
+        &:not(#step-1)>.form__content {
+            overflow: hidden;
+        }
     }
 
     &__content {
+        position: relative;
         flex-grow: 1;
     }
 
@@ -86,7 +91,7 @@
     &__title {
         margin-bottom: 43px;
 
-        font-size: 1.75rem;
+        font-size: 1.55rem;
         color: $text-main;
 
         span {
@@ -158,6 +163,7 @@
 
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
 
         .form__item {
             margin-bottom: 0;
@@ -168,6 +174,8 @@
         flex-shrink: 0;
 
         align-self: flex-end;
+
+        position: relative;
 
         width: $form-input-height-max;
         height: $form-input-height-max;
@@ -181,6 +189,22 @@
         svg {
             margin-left: 3px;
             margin-top: -5px;
+        }
+
+        &::before {
+            content: 'Далее';
+
+            position: absolute;
+            top: -40%;
+            left: 0;
+
+            width: 100%;
+
+            display: block;
+
+            text-align: center;
+            font-size: 1.25rem;
+            color: #818181;
         }
     }
 
@@ -244,22 +268,84 @@
         }
     }
 
-    &__info-radio {
-        margin-bottom: 1rem;
-        align-self: flex-end;
+    .checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
 
-        display: flex;
-        align-items: center;
-        gap: 5px;
+        &+label {
+            margin-bottom: 1rem;
 
-        div {
-            font-size: .875rem;
-            color: #818181;
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2px solid $blue;
+            border-radius: 50%;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+        &:checked+label::before {
+            border-color: $blue;
+            background-color: $blue;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
         }
     }
 
     &__box-wrapper {
-        display: none;
+        position: absolute;
+        top: -100%;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        transition: top 1s ease-in-out;
+    }
+
+    .lottie-1,
+    .lottie-2,
+    .lottie-3 {
+        width: 70%;
+    }
+
+    .lottie-3 {
+        & g[clip-path*=__lottie_element_]>g:first-child>g>path {
+            fill: transparent;
+        }
+    }
+}
+
+.form__content>:not(.form__box-wrapper) {
+    transition: opacity .5s;
+}
+
+.form__box.form__box--disabled {
+    & .form__content>:not(.form__box-wrapper) {
+        opacity: 0;
+    }
+}
+
+.form__box.form__box--top-position {
+    & .form__content>.form__box-wrapper {
+        top: 0;
     }
 }
 
@@ -343,6 +429,10 @@
 
             width: $form-input-height-medium;
             height: $form-input-height-medium;
+
+            &::before {
+                font-size: 0.8rem;
+            }
         }
 
         &__out-message {
@@ -353,7 +443,7 @@
             height: 75px;
         }
 
-        &__info-radio {
+        &__info-checkbox {
             margin-bottom: 10px;
 
             div {
@@ -392,5 +482,61 @@
                 height: 31px;
             }
         }
+    }
+}
+
+@media (max-width: 959px) {
+    .order {
+
+        &__inner {
+            padding-bottom: 360px;
+
+        }
+    }
+
+    .form {
+
+        display: grid;
+
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+
+        &__box {
+            grid-area: 1/-1;
+            width: 290px;
+        }
+
+        &>#step-1 {
+            order: 3;
+        }
+        &>#step-2 {
+            order: 2;
+            display: none;
+        }
+        &>#step-3 {
+            order: 1;
+            display: none;
+        }
+    }
+
+
+    .order__blur--blue {
+        display: none;
+    }
+
+    .order__blur--pink {
+        top: 20%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .order__blur--pink {
+        width: 225px;
+        height: 328px;
+
+        transform: rotate(-20deg);
     }
 }

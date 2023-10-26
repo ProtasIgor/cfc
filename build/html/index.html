@@ -115,13 +115,14 @@
         <div class="container">
             <div class="order__inner">
                 <form class="form" action="" method="post">
-                    <div class="form__box">
+                    <div class="form__box" id="step-1">
                         <div class="form__title"><span>1</span>Расчет кредита</div>
                         <div class="form__content">
                             <label class="form__item">
                                 <span form__label-text>Сумма кредита</span>
                                 <select class="form__select" id="form__select--sum" name="">
-                                    <option class="option-default" value="" disabled selected style='display:none;'>Выбрать...</option>
+                                    <option class="option-default" value="" disabled selected style='display:none;'>
+                                        Выбрать...</option>
                                     <option value="">До 1000 руб</option>
                                     <option value="">От 1000 до 3000 руб</option>
                                     <option value="">От 3000 до 7000 руб</option>
@@ -153,7 +154,8 @@
                             <div class="form__box-footer">
                                 <label class="form__item">
                                     <span form__label-text>Доход</span>
-                                    <select class="form__select form__select--smaller" id="form__select--smaller" name="">
+                                    <select class="form__select form__select--smaller" id="form__select--smaller"
+                                        name="">
                                         <option value="" disabled selected style='display:none;'>Выбрать...</option>
                                         <option value="">Менее 1000 руб</option>
                                         <option value="">1000-2000 руб</option>
@@ -161,7 +163,8 @@
                                         <option value="">Более 3000 руб</option>
                                     </select>
                                 </label>
-                                <button class="form__button" type="button">
+                                <button class="form__button form__button--calculation" type="button"
+                                    data-step-id="step-2">
                                     <svg width="19" height="16">
                                         <use xlink:href="svg/sprite.svg#form-btn"></use>
                                     </svg>
@@ -169,13 +172,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form__box">
+                    <div class="form__box form__box--disabled form__box--top-position" id="step-2">
                         <div class="form__title"><span>2</span>Результат расчета</div>
                         <div class="form__content">
                             <label class="form__item">
                                 <span class="form__label-text">Имя</span>
-                                <input class="form__input" type="text" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-я]{3,32}" autocomplete='off'
-                                >
+                                <input class="form__input" type="text" placeholder="Ваше имя"
+                                    pattern="[A-Za-zА-Яа-я]{3,32}" autocomplete='off'>
                             </label>
                             <label class="form__item">
                                 <span form__label-text>Где получить результат</span>
@@ -204,47 +207,37 @@
                             <label class="form__item">
                                 <span form__label-text>Телефон</span>
                                 <input class="form__input form__input--phone" type="text" name="phone"
-                                     autocomplete='off' placeholder="+375 (29) 719-85-85">
+                                    autocomplete='off' placeholder="+375 (__) ___-__-__">
                             </label>
                             <div class="form__box-footer">
-                                <label class="form__info-radio"><input type="radio">
+                                <input class="checkbox" id="checkbox" type="checkbox">
+                                <label class="form__info-checkbox" for="checkbox">
                                     <div>я принимаю условия обработки персональных данных
                                     </div>
                                 </label>
-                                <button class="form__button" type="button">
+                                <button class="form__button form__button--result" type="button" data-step-id="step-3">
                                     <svg width="19" height="16">
                                         <use xlink:href="svg/sprite.svg#form-btn"></use>
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-                        <div class="form__box-wrapper">
-                            <picture>
-                                <source>
-                                <source>
-                                <img src="" alt="" decoding="async" loading="lazy">
-                            </picture>
-                            <p class="form__text">Введите данные кредита, для перехода к расчету</p>
+                            <div class="form__box-wrapper">
+                                <div class="lottie-1"></div>
+                                <p class="form__text">Введите данные кредита, для перехода к расчету</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="form__box">
+                    <div class="form__box form__box--disabled form__box--top-position" id="step-3">
                         <div class="form__title"><span>3</span>Анализ данных</div>
                         <div class="form__content form__content--analysis">
-                            <picture>
-                                <source srcset="images/form-submit.avif" type="image/avif">
-                                <source srcset="images/form-submit.webp" type="image/webp">
-                                <img src="images/src/form-submit.png" alt="" decoding="async" loading="lazy">
-                            </picture>
+                            <div class="lottie-3"></div>
                             <p class="form__text form__text--bold">Заявка отправлена</p>
-                            <p class="form__text">Чтобы узнать результат, заполните контактные данные</p>
-                        </div>
-                        <div class="form__box-wrapper">
-                            <picture>
-                                <source srcset="" type="image/avif">
-                                <source srcset="" type="image/webp">
-                                <img src="" alt="" decoding="async" loading="lazy">
-                            </picture>
-                            <p class="form__text">Чтобы узнать результат, заполните контактные данные</p>
+                            <p class="form__text">В ближайшее время вы получите результат</p>
+
+                            <div class="form__box-wrapper">
+                                <div class="lottie-2"></div>
+                                <p class="form__text">Чтобы узнать результат, заполните контактные данные</p>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -311,7 +304,7 @@
         </div>
     </footer>
 
-    <script src="js/script.min.js"></script>
+    <script async src="js/script.min.js"></script>
 </body>
 
 </html>
