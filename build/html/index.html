@@ -120,47 +120,47 @@
                         <div class="form__content">
                             <label class="form__item">
                                 <span form__label-text>Сумма кредита</span>
-                                <select class="form__select" id="form__select--sum" name="">
+                                <select class="form__select" id="form__select--sum" name="credit-sum">
                                     <option class="option-default" value="" disabled selected style='display:none;'>
                                         Выбрать...</option>
-                                    <option value="">До 1000 руб</option>
-                                    <option value="">От 1000 до 3000 руб</option>
-                                    <option value="">От 3000 до 7000 руб</option>
-                                    <option value="">От 7000 до 10 000 руб</option>
-                                    <option value="">От 10 000 руб</option>
+                                    <option value="1">До 1000 руб</option>
+                                    <option value="2">От 1000 до 3000 руб</option>
+                                    <option value="3">От 3000 до 7000 руб</option>
+                                    <option value="4">От 7000 до 10 000 руб</option>
+                                    <option value="5">От 10 000 руб</option>
                                 </select>
                             </label>
                             <label class="form__item">
                                 <span form__label-text>Срок кредита</span>
-                                <select class="form__select" id="form__select--time" name="">
+                                <select class="form__select" id="form__select--time" name="credit-time">
                                     <option value="" disabled selected style='display:none;'>Выбрать...</option>
-                                    <option value="">До 1 года</option>
-                                    <option value="">От 2 до 3 лет</option>
-                                    <option value="">От 3 до 5 лет</option>
-                                    <option value="">Более 5 лет</option>
+                                    <option value="1">До 1 года</option>
+                                    <option value="2">От 2 до 3 лет</option>
+                                    <option value="3">От 3 до 5 лет</option>
+                                    <option value="4">Более 5 лет</option>
                                 </select>
                             </label>
                             <label class="form__item">
                                 <span form__label-text>Наличие работы</span>
-                                <select class="form__select" id="form__select--work" name="">
+                                <select class="form__select" id="form__select--work" name="work-time">
                                     <option value="" disabled selected style='display:none;'>Выбрать...</option>
-                                    <option value="">Да, более 3 месяцев</option>
-                                    <option value="">Да, менее 3 месяцев</option>
-                                    <option value="">Нет</option>
-                                    <option value="">В декретном отпуске</option>
-                                    <option value="">На пенсии</option>
+                                    <option value="1">Да, более 3 месяцев</option>
+                                    <option value="2">Да, менее 3 месяцев</option>
+                                    <option value="3">Нет</option>
+                                    <option value="4">В декретном отпуске</option>
+                                    <option value="5">На пенсии</option>
                                 </select>
                             </label>
                             <div class="form__box-footer">
                                 <label class="form__item">
                                     <span form__label-text>Доход</span>
-                                    <select class="form__select form__select--smaller" id="form__select--smaller"
-                                        name="">
+                                    <select class="form__select form__select--smaller" id="form__select--income"
+                                        name="income">
                                         <option value="" disabled selected style='display:none;'>Выбрать...</option>
-                                        <option value="">Менее 1000 руб</option>
-                                        <option value="">1000-2000 руб</option>
-                                        <option value="">2000-3000 руб</option>
-                                        <option value="">Более 3000 руб</option>
+                                        <option value="1">Менее 1000 руб</option>
+                                        <option value="2">1000-2000 руб</option>
+                                        <option value="3">2000-3000 руб</option>
+                                        <option value="4">Более 3000 руб</option>
                                     </select>
                                 </label>
                                 <button class="form__button form__button--calculation" type="button"
@@ -172,33 +172,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form__box form__box--disabled form__box--top-position" id="step-2">
+                    <div class="form__box form__box--disabled form__box--dis-mob form__box--top-position " id="step-2">
                         <div class="form__title"><span>2</span>Результат расчета</div>
                         <div class="form__content">
                             <label class="form__item">
                                 <span class="form__label-text">Имя</span>
-                                <input class="form__input" type="text" placeholder="Ваше имя"
-                                    pattern="[A-Za-zА-Яа-я]{3,32}" autocomplete='off'>
+                                <p style="height: 0;"></p>
+                                <input class="form__input" id="form__input--name" type="text" placeholder="Ваше имя"
+                                    autocomplete='off'>
                             </label>
                             <label class="form__item">
                                 <span form__label-text>Где получить результат</span>
                                 <div class="form__out-message">
-                                    <input type="radio" id="form_radio1" name="messenger" value="1">
+                                    <input type="radio" id="form_radio1" name="messenger" value="phone">
                                     <label class="form__radio-label1" for="form_radio1">
                                         <img src="svg/sprite.svg#form-phone" alt="" loading="lazy" decoding="async">
                                     </label>
 
-                                    <input type="radio" id="form_radio2" name="messenger" value="2">
+                                    <input type="radio" id="form_radio2" name="messenger" value="sms">
                                     <label class="form__radio-label2" for="form_radio2">
                                         <img src="svg/sprite.svg#form-sms" alt="" loading="lazy" decoding="async">
                                     </label>
 
-                                    <input type="radio" id="form_radio3" name="messenger" value="3">
+                                    <input type="radio" id="form_radio3" name="messenger" value="telegram">
                                     <label class="form__radio-label3" for="form_radio3">
                                         <img src="svg/sprite.svg#form-telegram" alt="" loading="lazy" decoding="async">
                                     </label>
 
-                                    <input type="radio" id="form_radio4" name="messenger" value="4">
+                                    <input type="radio" id="form_radio4" name="messenger" value="whatsapp">
                                     <label class="form__radio-label4" for="form_radio4">
                                         <img src="svg/sprite.svg#form-whatsapp" alt="" loading="lazy" decoding="async">
                                     </label>
@@ -206,14 +207,15 @@
                             </label>
                             <label class="form__item">
                                 <span form__label-text>Телефон</span>
-                                <input class="form__input form__input--phone" type="text" name="phone"
-                                    autocomplete='off' placeholder="+375 (__) ___-__-__">
+                                <input class="form__input form__input--phone" id="form__input--phone" type="text"
+                                    name="phone" autocomplete='off' placeholder="+375 (__) ___-__-__">
                             </label>
                             <div class="form__box-footer">
-                                <input class="checkbox" id="checkbox" type="checkbox">
-                                <label class="form__info-checkbox" for="checkbox">
-                                    <div>я принимаю условия обработки персональных данных
-                                    </div>
+                                <input class="checkbox" id="form-input-agree" type="checkbox">
+                                <label class="form__info-checkbox" for="form-input-agree">
+                                    <a href="https://creditbel.com/Politics_cfc.pdf" target="_blank">я принимаю условия
+                                        обработки персональных данных
+                                    </a>
                                 </label>
                                 <button class="form__button form__button--result" type="button" data-step-id="step-3">
                                     <svg width="19" height="16">
@@ -227,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form__box form__box--disabled form__box--top-position" id="step-3">
+                    <div class="form__box form__box--disabled form__box--dis-mob form__box--top-position" id="step-3">
                         <div class="form__title"><span>3</span>Анализ данных</div>
                         <div class="form__content form__content--analysis">
                             <div class="lottie-3"></div>
