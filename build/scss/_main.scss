@@ -142,3 +142,9 @@ body {
         height: 81px;
     }
 }
+
+@media (max-width: 480px) {
+    .phone {
+        font-size: .8rem;
+    }
+}

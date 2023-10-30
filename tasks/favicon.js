@@ -6,13 +6,13 @@ const filter = require('gulp-filter');
 const Favicon = () => {
     return $.gulp.src($.path.favicon.src)
         .pipe(favicons({
-            appName: 'My App',
-            appShortName: 'App',
-            appDescription: 'This is my application',
-            developerName: 'HAKEZ',
+            appName: 'CFC',
+            appShortName: 'CFC',
+            appDescription: 'CFC',
+            developerName: 'Igor',
             developerURL: '',
             background: '#020307',
-            path: 'favicons/',
+            path: 'favicon/',
             url: '',
             display: 'standalone',
             orientation: 'portrait',

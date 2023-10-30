@@ -12,14 +12,12 @@ buttons.forEach((button) => {
 
         const formBox = document.getElementById(Id);
 
-
-
         if (window.innerWidth > 959) {
 
             setTimeout(() => {
 
                 if (Id === 'step-2') {
-                    //if (CheckSelectValue() == false) return;
+                    if (CheckSelectValue() == true) return;
 
                     formBox.classList.remove('form__box--top-position');
 
@@ -29,7 +27,7 @@ buttons.forEach((button) => {
                     }, 500);
                 }
                 if (Id === 'step-3') {
-                    if (CheckInputValue() == false) return;
+                    if (CheckInputValue() == true) return;
 
                     formBox.classList.remove('form__box--top-position');
 
@@ -38,6 +36,12 @@ buttons.forEach((button) => {
                     setTimeout(() => {
                         formBox.style.display = 'flex';
                         formBox.classList.remove('form__box--disabled');
+
+                        //form.submit
+                        setTimeout(() => {
+                            document.querySelector('.form').submit();
+
+                        }, 1000);
                     }, 500);
                 }
 
@@ -47,7 +51,7 @@ buttons.forEach((button) => {
 
             if (Id === 'step-2') {
 
-                if (CheckSelectValue() == false) return;
+                if (CheckSelectValue() == true) return;
 
                 document.querySelector('#step-1').classList.add('form__box--dis-mob');
 
@@ -67,6 +71,8 @@ buttons.forEach((button) => {
             }
             if (Id === 'step-3') {
 
+                if (CheckInputValue() == true) return;
+
                 document.querySelector('#step-2').classList.add('form__box--dis-mob');
 
                 setTimeout(() => {
@@ -79,6 +85,12 @@ buttons.forEach((button) => {
                         setTimeout(() => {
                             formBox.classList.remove('form__box--disabled');
                             lottie.lottie3.play();
+
+                            //form.submit
+                            setTimeout(() => {
+                                document.querySelector('.form').submit();
+
+                            }, 1000);
                         }, 1000);
                     }, 1000);
 
@@ -103,6 +115,15 @@ buttons.forEach((button) => {
 
         let isError = true;
 
+        for (const select of selects) {
+            if (select.value == '') {
+                isError = true;
+                break;
+            }
+            else {
+                isError = false;
+            }
+        }
         selects.forEach((select) => {
             if (select.value == '') {
                 select.nextSibling.classList.add('form__select--reqired');
@@ -110,8 +131,6 @@ buttons.forEach((button) => {
                 setTimeout(() => {
                     select.nextSibling.classList.remove('form__select--reqired');
                 }, 3000);
-
-                isError = false;
             }
         })
 
@@ -120,21 +139,18 @@ buttons.forEach((button) => {
 
     function CheckInputValue() {
         const inputName = document.querySelector('#form__input--name');
-        const messager = document.getElementsByName('messenger');
+        const messanger = document.getElementsByName('messenger');
         const inputPhone = document.querySelector('#form__input--phone');
         const inputAgreeInfo = document.querySelector('.checkbox');
 
-        /* const inputs = [
-            inputName,
-            messager,
-            inputPhone,
-            inputAgreeInfo,
-        ]; */
+        let isErrorName = true;
+        let isErrorRadio = true;
+        let isErrorPhone = true;
+        let isErrorCheckbox = true;
 
-        let isError = true;
 
-        //console.log('Test' + /[^\d\s]{3,32}/.test(inputName.value.toString()));
-        if (/[^\d\s]{3,32}/.test(inputName.value.toString()) === false) {
+        // Имя клиента
+        if (/^[а-яА-ЯёЁ]{3,32}$/.test(inputName.value.toString()) === false) {
 
             inputName.previousElementSibling.classList.add('form__input--reqired');
             inputName.classList.add('form__input--reqired');
@@ -144,22 +160,44 @@ buttons.forEach((button) => {
                 inputName.classList.remove('form__input--reqired');
             }, 3000);
 
-            isError = false;
+            isErrorName = true;
+        } else {
+            isErrorName = !isErrorName;
         }
 
-        messenger.forEach((radio) => {
-            if (radio.checked === false) {
-                document.querySelector('.form__out-message').classList.add('form__input--reqired');
-
-                setTimeout(() => {
-                    document.querySelector('.form__out-message').classList.remove('form__input--reqired');
-                }, 3000);
-
-                isError = false;
+        // Radio[] с вариантом ответа на сервере
+        for (const radio of messanger) {
+            if (radio.checked == true) {
+                isErrorRadio = false;
+                break;
             }
-        });
+            else {
+                isErrorRadio = true;
+            }
+        }
+        if (isErrorRadio) {
+            document.querySelector('.form__out-message').classList.add('form__input--reqired');
 
+            setTimeout(() => {
+                document.querySelector('.form__out-message').classList.remove('form__input--reqired');
+            }, 3000);
 
+        }
+
+        // Phone
+        if (inputPhone.value.length != 19) {
+            isErrorPhone = true;
+
+            inputPhone.previousElementSibling.classList.add('form__input--reqired');
+
+            setTimeout(() => {
+                inputPhone.previousElementSibling.classList.remove('form__input--reqired');
+            }, 3000);
+        } else {
+            isErrorPhone = !isErrorPhone;
+        }
+
+        // CheckBox принятия соглашения
         if (inputAgreeInfo.checked === false) {
             inputAgreeInfo.nextElementSibling.classList.add('form__input--reqired');
 
@@ -167,26 +205,13 @@ buttons.forEach((button) => {
                 inputAgreeInfo.nextElementSibling.classList.remove('form__input--reqired');
             }, 3000);
 
-            isError = false;
+            isErrorCheckbox = true;
+        }
+        else {
+            isErrorCheckbox = !isErrorCheckbox;
         }
 
-        return isError;
-
-
-
-        /* selects.forEach((select) => {
-            if (select.value == '') {
-                select.nextSibling.classList.add('form__select--reqired');
-
-                setTimeout(() => {
-                    select.nextSibling.classList.remove('form__select--reqired');
-                }, 3000);
-
-                isError = false;
-            }
-        })
-
-        return isError; */
+        return (isErrorName || isErrorRadio || isErrorPhone || isErrorCheckbox);
     }
 })
 

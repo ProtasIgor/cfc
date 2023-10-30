@@ -63,6 +63,14 @@
     z-index: 1;
 }
 
+.form__out-message.form__input--reqired::before {
+    transform: translateY(-34px);
+}
+
+.form__item>span+p.form__input--reqired::before {
+    transform: translateY(-41px);
+}
+
 .nice-select.form__select {
     border-radius: 30px;
     height: $form-input-height-max;
@@ -189,6 +197,7 @@
     .form__item>div.nice-select.form__select.form__select--smaller {
         width: 185px;
     }
+
     .form__out-message::before,
     .form__info-checkbox::after,
     .form__item>span+p::before,
@@ -197,6 +206,16 @@
         top: 6px;
 
         line-height: 1.6;
+    }
+
+    .form__info-checkbox::after {
+        padding: 10px 6%;
+
+        top: 53px;
+        left: 20px;
+        width: 164px;
+
+        font-size: .5rem;
     }
 
     .form__item>span+p::before {

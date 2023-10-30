@@ -30,13 +30,13 @@ const watcher = () => {
 
     $.gulp.watch($.path.style.watch, style);
     $.gulp.watch($.path.script.watch, script);
-    $.gulp.watch($.path.image.watch, imgmin);
+    $.gulp.watch($.path.image.watch, /* imgmin */);
     $.gulp.watch($.path.svg.watch, svgmin);
     $.gulp.watch($.path.sprite.watch, sprite);
 }
 
-const reliase = $.gulp.series($.gulp.parallel(clean, $.app.isProjectWithPug ? pug : html,
-    style, script, imgmin, svgmin, sprite), build);
+const reliase = $.gulp.series(clean, $.app.isProjectWithPug ? pug : html,
+    style, /* script,  imgmin, svgmin, sprite,*/ build);
 const dev = $.gulp.parallel(watcher, server);
 
 if ($.app.isProjectWithPug) {

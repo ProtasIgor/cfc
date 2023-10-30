@@ -108,6 +108,7 @@
     }
 
     &__item {
+        position: relative;
         margin-bottom: 1rem;
 
         display: flex;
@@ -284,6 +285,10 @@
 
             a {
                 color: #818181;
+            }
+
+            a:hover {
+                text-decoration: underline 1px solid #818181;
             }
         }
 

@@ -34,7 +34,7 @@ const path = {
         dest: pathBaseSource + `/fonts`,
     },
     image: {
-        src: pathBaseSource + '/images/src/*',
+        src: [pathBaseSource + '/images/src/*', '!' + pathBaseSource + '/images/src/*.json'],
         watch: pathBaseSource + '/images/src/*',
         dest: pathBaseSource + `/images`,
     },
