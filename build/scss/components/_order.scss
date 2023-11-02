@@ -160,7 +160,6 @@
     &__box-footer {
         position: relative;
         height: 96px;
-
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -172,18 +171,12 @@
 
     &__button {
         flex-shrink: 0;
-
-        align-self: flex-end;
-
         position: relative;
-
         width: $form-input-height-max;
         height: $form-input-height-max;
-
         background: $blue;
         border-radius: 50%;
         border: none;
-
         cursor: pointer;
 
         svg {
@@ -275,14 +268,11 @@
         opacity: 0;
 
         &+label {
-            margin-bottom: 1rem;
-
             display: inline-flex;
             align-items: center;
             user-select: none;
-
             font-size: .8rem;
-
+            height: $form-input-height-max;
             a {
                 color: #818181;
             }
@@ -331,9 +321,7 @@
         transition: top 1s ease-in-out;
     }
 
-    .lottie-1,
-    .lottie-2,
-    .lottie-3 {
+    .lottie-animantion {
         width: 70%;
     }
 
@@ -435,9 +423,6 @@
 
         &__button {
             flex-shrink: 0;
-
-            align-self: flex-end;
-
             width: $form-input-height-medium;
             height: $form-input-height-medium;
 
@@ -455,11 +440,12 @@
         }
 
         &__info-checkbox {
-            margin-bottom: 10px;
-
             div {
                 font-size: 10px;
             }
+        }
+        .checkbox +label {
+            height: $form-input-height-medium;
         }
 
         &__radio-label1 {
@@ -498,30 +484,24 @@
 
 @media (max-width: 959px) {
     .form {
-
         display: grid;
-
         justify-content: center;
         width: 100%;
         gap: 0;
-
         &__box {
             grid-area: 1/-1;
             width: 290px;
         }
-
         &>#step-1 {
             order: 3;
         }
 
         &>#step-2 {
             order: 2;
-            //display: none;
         }
 
         &>#step-3 {
             order: 1;
-            //display: none;
         }
     }
 
@@ -540,6 +520,8 @@
 
     .form__box.form__box--dis-mob {
         opacity: 0;
+        z-index: -1;
+        position: relative;
     }
 }
 

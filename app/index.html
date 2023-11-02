@@ -1,1 +1,308 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CFC</title><meta rel="description" content=""><link rel="icon" href="favicon/favicon.ico" sizes="any"><link rel="icon" href="favicon/icon.svg" sizes="any" type="image/svg+xml"><link rel="apple-touch-icon" href="favicon/apple-touch-icon-180x180.png" sizes="180x180"><link rel="manifest" href="favicon/manifest.webmanifest"><link rel="stylesheet" href="css/style.min.css"></head><body><header class="header"><div class="container"><div class="header__inner"><a class="header__logo logo" href="" target="_blank"><img src="images/src/logo.png" alt="site-logo" fetchpriority="high"> </a><a class="header__phone phone" href="tel:+375298883222">+375 (29) 888-32-22</a></div></div></header><main class="main"><div class="container"><div class="main__inner"><div class="main__content"><h1 class="main__title">ПОМОГАЕМ&nbsp;ПОЛУЧИТЬ<br>КРЕДИТ БЫСТРЕЕ,<br>ПРОЩЕ И Выгоднее</h1><p class="main__text">Получите выгодные предложения<br>по кредиту прямо сейчас</p><ul class="main__list"><li class="main__list-item"><img class="main__list-img" src="images/calculate.png" alt=""><p class="main__list-text">Годовая ставка от 9.9%</p></li><li class="main__list-item"><img class="main__list-img" src="images/money.png" alt=""><p class="main__list-text">Cумма кредита до 20 000 BYN</p></li><li class="main__list-item"><img class="main__list-img" src="images/alarm.png" alt=""><p class="main__list-text main__list-text--biggest">Одобрение кредита за 30 минут</p></li></ul><div class="button"><div class="button__background"></div><button class="button__header">Подобрать кредит</button></div></div><div class="main__message main__message--first"><div class="main__message-header"><img src="images/client-picture.png" alt="" fetchpriority="high"><div><p>Клиент</p><span>30 мин.</span></div></div><div class="main__message-content">Банк не одобряет мне кредит, можете мне помочь?</div></div><div class="main__message main__message--second"><div class="main__message-header"><img src="images/main-cfc-label.png" alt="" fetchpriority="high"><div><p>Центр Финансовых консультаций</p><span>1 мин.</span></div></div><div class="main__message-content">Вам одобрен кредит на сумму<br>9 000 руб. с процентной ставкой 9,9%</div></div><div class="main__timer"><svg><use xlink:href="svg/sprite.svg#main-timer"></use></svg><p>30 минут</p></div></div></div></main><section class="advantage"><div class="container"><div class="advantage__inner"><picture class="advantage__picture"><source srcset="images/advantage-picture.avif" type="image/avif"><source srcset="images/advantage-picture.webp" type="image/webp"><img src="images/advantage-picture.png" alt="" decoding="async" loading="lazy"></picture><ul class="advantage__list"><li class="advantage-box advantage1"><strong class="advantage-box__title">До 25% экономии</strong><p class="advantage-box__text">Мы поможем избежать оформления страховки и скрытых платежей</p></li><li class="advantage-box advantage2"><strong class="advantage-box__title">Без предоплаты</strong><p class="advantage-box__text">Вы платите только за полученный результат. Все консультации БЕСПЛАТНЫЕ</p></li><li class="advantage-box advantage3"><strong class="advantage-box__title">Без справки о доходах</strong><p class="advantage-box__text">Закроем кредитные карты, сделаем одинвыгодный кредит без залога, страховки, поручителей</p></li><li class="advantage-box advantage4"><strong class="advantage-box__title">Более 20 банков-партнеров</strong><p class="advantage-box__text">Вы получаете эксклюзивные условия и приоритет в рассмотрении заявки</p></li></ul></div></div></section><section class="order"><div class="container"><div class="order__inner"><form class="form" action="" method="post"><div class="form__box" id="step-1"><div class="form__title"><span>1</span>Расчет кредита</div><div class="form__content"><label class="form__item"><span form__label-text>Сумма кредита</span> <select class="form__select" id="form__select--sum" name="credit-sum"><option class="option-default" value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option><option value="1">До 1000 руб</option><option value="2">От 1000 до 3000 руб</option><option value="3">От 3000 до 7000 руб</option><option value="4">От 7000 до 10 000 руб</option><option value="5">От 10 000 руб</option></select></label> <label class="form__item"><span form__label-text>Срок кредита</span> <select class="form__select" id="form__select--time" name="credit-time"><option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option><option value="1">До 1 года</option><option value="2">От 2 до 3 лет</option><option value="3">От 3 до 5 лет</option><option value="4">Более 5 лет</option></select></label> <label class="form__item"><span form__label-text>Наличие работы</span> <select class="form__select" id="form__select--work" name="work-time"><option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option><option value="1">Да, более 3 месяцев</option><option value="2">Да, менее 3 месяцев</option><option value="3">Нет</option><option value="4">В декретном отпуске</option><option value="5">На пенсии</option></select></label><div class="form__box-footer"><label class="form__item"><span form__label-text>Доход</span> <select class="form__select form__select--smaller" id="form__select--income" name="income"><option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option><option value="1">Менее 1000 руб</option><option value="2">1000-2000 руб</option><option value="3">2000-3000 руб</option><option value="4">Более 3000 руб</option></select></label> <button class="form__button form__button--calculation" type="button" data-step-id="step-2"><svg width="19" height="16"><use xlink:href="svg/sprite.svg#form-btn"></use></svg></button></div></div></div><div class="form__box form__box--disabled form__box--dis-mob form__box--top-position" id="step-2"><div class="form__title"><span>2</span>Результат расчета</div><div class="form__content"><label class="form__item" style="gap: 2.5px;"><span class="form__label-text">Имя</span><p style="height: 0;"></p><input class="form__input" id="form__input--name" type="text" placeholder="Ваше имя" autocomplete="off"></label> <label class="form__item"><span form__label-text>Где получить результат</span><div class="form__out-message"><input type="radio" id="form_radio1" name="messenger" value="phone"> <label class="form__radio-label1" for="form_radio1"><img src="svg/sprite.svg#form-phone" alt="" loading="lazy" decoding="async"></label> <input type="radio" id="form_radio2" name="messenger" value="sms"> <label class="form__radio-label2" for="form_radio2"><img src="svg/sprite.svg#form-sms" alt="" loading="lazy" decoding="async"></label> <input type="radio" id="form_radio3" name="messenger" value="telegram"> <label class="form__radio-label3" for="form_radio3"><img src="svg/sprite.svg#form-telegram" alt="" loading="lazy" decoding="async"></label> <input type="radio" id="form_radio4" name="messenger" value="whatsapp"> <label class="form__radio-label4" for="form_radio4"><img src="svg/sprite.svg#form-whatsapp" alt="" loading="lazy" decoding="async"></label></div></label> <label class="form__item" style="gap: 2.5px;"><span form__label-text>Телефон</span><p style="height: 0;"></p><input class="form__input form__input--phone" id="form__input--phone" type="text" name="phone" autocomplete="off" placeholder="+375 (__) ___-__-__"></label><div class="form__box-footer"><input class="checkbox" id="form-input-agree" type="checkbox"> <label class="form__info-checkbox" for="form-input-agree"><a href="https://creditbel.com/Politics_cfc.pdf" target="_blank">я принимаю условия обработки персональных данных</a></label> <button class="form__button form__button--result" type="button" data-step-id="step-3"><svg width="19" height="16"><use xlink:href="svg/sprite.svg#form-btn"></use></svg></button></div><div class="form__box-wrapper"><div class="lottie-1"></div><p class="form__text">Введите данные кредита, для перехода к расчету</p></div></div></div><div class="form__box form__box--disabled form__box--dis-mob form__box--top-position" id="step-3"><div class="form__title"><span>3</span>Анализ данных</div><div class="form__content form__content--analysis"><div class="lottie-3"></div><p class="form__text form__text--bold">Заявка отправлена</p><p class="form__text">В ближайшее время вы получите результат</p><div class="form__box-wrapper"><div class="lottie-2"></div><p class="form__text">Чтобы узнать результат, заполните контактные данные</p></div></div></div></form><div class="order__blur order__blur--blue"></div><div class="order__blur order__blur--pink"></div></div></div></section><footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__head"><a class="footer__logo logo" href="" target="_blank"><img src="images/src/logo.png" alt="site-logo"></a><ul class="footer__social"><li><a class="footer__link" href="https://www.tiktok.com/@center_credit" target="_blank"><svg width="40" height="40"><use xlink:href="svg/sprite.svg#tiktok" decoding="async" loading="lazy"></use></svg></a></li><li><a class="footer__link" href="https://www.instagram.com/center_finance" target="_blank"><svg width="40" height="40"><use xlink:href="svg/sprite.svg#instagram" decoding="async" loading="lazy"></use></svg></a></li><li><a class="footer__link" href="https://vk.com/center_finance" target="_blank"><svg width="40" height="40"><use xlink:href="svg/sprite.svg#Vk" decoding="async" loading="lazy"></use></svg></a></li><li><a class="footer__link" href="https://ok.ru/centerfinance" target="_blank"><svg width="40" height="40"><use xlink:href="svg/sprite.svg#ok" decoding="async" loading="lazy"></use></svg></a></li></ul><a class="footer__phone phone" href="tel:+375298883222">+375 (29) 888-32-22</a></div><div class="footer__body">cfc.by не оказывает услуг по оформлению и предоставлению населению микрозаймов, кредитов и других финансовых услуг, регулируемых Указом Президента №325 "О привлечении и предоставлении займов, деятельности микрофинансовых организаций". ООО «Центр финансовых консультация» (УНП 193679768, адрес: 220005, г. Минск, пр-кт Независимости, д. 58, к. 4, пом. 435 (ТЦ «Московско-венский», Первомайский район г. Минска)) оставляет за собой право отправлять заявки в зависимости от территориальности и иных критериев в компании-партнеры (банки). Условия кредитования: сумма кредита — от 500 до 200 000 BYN; минимальная процентная ставка - 7,7%, максимальная процентная ставка 26,9% годовых; минимальный срок кредитования 30 дней, максимальный срок кредитования 84 мес. Примеры расчета: сумма 1500 BYN на три года, 13,7% годовых 50,54 BYN первый платеж. Итоговая переплата: 319,47 BYN. Досрочное погашение без штрафов. При неуплате в срок процентов за пользование кредитом, насчитывается пеня в размере 1% от суммы неуплаченных процентов за каждый день просрочки. Ваша заявка в зависимости от условий будет отправлена в один из следующих банков: Абсолютбанк, Альфа-Банк, Белагропромбанк, АСБ Беларусбанк, Банк БелВЭБ, Белгазпромбанк, Белинвестбанк, Банк Дабрабыт, Банк Решение, БНБ-Банк, Сбер Банк, БТА Банк, Банк ВТБ (Беларусь), МТБанк, БСБ Банк, Паритетбанк, Приорбанк, РРБ-Банк, СтатусБанк, Технобанк, Франсабанк, Цептер Банк. Узнать подробности вы можете по телефону +375 (29) 888-3-222. Компания вправе взымать комиссию за свои услуги.</div></div></div></footer><script async src="js/script.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CFC</title>
+    <meta rel="description" content="">
+    <link rel="icon" href="favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="favicon/icon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="manifest" href="favicon/manifest.webmanifest">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__logo logo" href="" target="_blank">
+                    <img src="images/src/logo.png" alt="site-logo" fetchpriority="high">
+                </a>
+                <a class="header__phone phone" href="tel:+375298883222">+375 (29) 888-32-22</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <div class="main__content">
+                    <h1 class="main__title">ПОМОГАЕМ&nbsp;ПОЛУЧИТЬ<br>КРЕДИТ БЫСТРЕЕ,<br>ПРОЩЕ И Выгоднее</h1>
+                    <p class="main__text">Получите выгодные предложения<br>по кредиту прямо сейчас</p>
+                    <ul class="main__list">
+                        <li class="main__list-item">
+                            <img class="main__list-img" src="images/calculate.png" alt="">
+                            <p class="main__list-text">Годовая ставка от 9.9%</p>
+                        </li>
+                        <li class="main__list-item">
+                            <img class="main__list-img" src="images/money.png" alt="">
+                            <p class="main__list-text">Cумма кредита до 20 000 BYN</p>
+                        </li>
+                        <li class="main__list-item">
+                            <img class="main__list-img" src="images/alarm.png" alt="">
+                            <p class="main__list-text main__list-text--biggest">Одобрение кредита за 30 минут</p>
+                        </li>
+                    </ul>
+                    <div class="button">
+                        <div class="button__background"></div>
+                        <button class="button__header">Подобрать кредит</button>
+                    </div>
+                </div>
+                <div class="main__message main__message--first">
+                    <div class="main__message-header">
+                        <img src="images/client-picture.png" alt="" fetchpriority="high">
+                        <div>
+                            <p>Клиент</p>
+                            <span>30 мин.</span>
+                        </div>
+                    </div>
+                    <div class="main__message-content">Банк не одобряет мне кредит, можете мне помочь?</div>
+                </div>
+                <div class="main__message main__message--second">
+                    <div class="main__message-header">
+                        <img src="images/main-cfc-label.png" alt="" fetchpriority="high">
+                        <div>
+                            <p>Центр Финансовых консультаций</p>
+                            <span>1 мин.</span>
+                        </div>
+                    </div>
+                    <div class="main__message-content">Вам одобрен кредит на сумму<br>9 000 руб. с процентной ставкой
+                        9,9%</div>
+                </div>
+                <div class="main__timer">
+                    <svg>
+                        <use xlink:href="svg/sprite.svg#main-timer"></use>
+                    </svg>
+                    <p>30 минут</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="advantage">
+        <div class="container">
+            <div class="advantage__inner">
+                <picture class="advantage__picture">
+                    <source srcset="images/advantage-picture.avif" type="image/avif">
+                    <source srcset="images/advantage-picture.webp" type="image/webp">
+                    <img src="images/advantage-picture.png" alt="" decoding="async" loading="lazy">
+                </picture>
+                <ul class="advantage__list">
+                    <li class="advantage-box advantage1">
+                        <strong class="advantage-box__title">До 25% экономии</strong>
+                        <p class="advantage-box__text">Мы поможем избежать оформления страховки и скрытых платежей</p>
+                    </li>
+                    <li class="advantage-box advantage2">
+                        <strong class="advantage-box__title">Без предоплаты</strong>
+                        <p class="advantage-box__text">Вы платите только за полученный результат. Все консультации
+                            БЕСПЛАТНЫЕ</p>
+                    </li>
+                    <li class="advantage-box advantage3">
+                        <strong class="advantage-box__title">Без справки о доходах</strong>
+                        <p class="advantage-box__text">Закроем кредитные карты, сделаем одинвыгодный кредит без залога,
+                            страховки, поручителей</p>
+                    </li>
+                    <li class="advantage-box advantage4">
+                        <strong class="advantage-box__title">Более 20 банков-партнеров</strong>
+                        <p class="advantage-box__text">Вы получаете эксклюзивные условия и приоритет в рассмотрении
+                            заявки</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="order">
+        <div class="container">
+            <div class="order__inner">
+                <form class="form" action="" method="post">
+                    <div class="form__box" id="step-1">
+                        <div class="form__title"><span>1</span>Расчет кредита</div>
+                        <div class="form__content">
+                            <label class="form__item">
+                                <span form__label-text>Сумма кредита</span>
+                                <select class="form__select" id="form__select--sum" name="credit-sum">
+                                    <option class="option-default" value="" disabled="disabled" selected="selected" style="display:none;">
+                                        Выбрать...</option>
+                                    <option value="1">До 1000 руб</option>
+                                    <option value="2">От 1000 до 3000 руб</option>
+                                    <option value="3">От 3000 до 7000 руб</option>
+                                    <option value="4">От 7000 до 10 000 руб</option>
+                                    <option value="5">От 10 000 руб</option>
+                                </select>
+                            </label>
+                            <label class="form__item">
+                                <span form__label-text>Срок кредита</span>
+                                <select class="form__select" id="form__select--time" name="credit-time">
+                                    <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
+                                    <option value="1">До 1 года</option>
+                                    <option value="2">От 2 до 3 лет</option>
+                                    <option value="3">От 3 до 5 лет</option>
+                                    <option value="4">Более 5 лет</option>
+                                </select>
+                            </label>
+                            <label class="form__item">
+                                <span form__label-text>Наличие работы</span>
+                                <select class="form__select" id="form__select--work" name="work-time">
+                                    <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
+                                    <option value="1">Да, более 3 месяцев</option>
+                                    <option value="2">Да, менее 3 месяцев</option>
+                                    <option value="3">Нет</option>
+                                    <option value="4">В декретном отпуске</option>
+                                    <option value="5">На пенсии</option>
+                                </select>
+                            </label>
+                            <div class="form__box-footer">
+                                <label class="form__item">
+                                    <span form__label-text>Доход</span>
+                                    <select class="form__select form__select--smaller" id="form__select--income" name="income">
+                                        <option value="" disabled="disabled" selected="selected" style="display:none;">Выбрать...</option>
+                                        <option value="1">Менее 1000 руб</option>
+                                        <option value="2">1000-2000 руб</option>
+                                        <option value="3">2000-3000 руб</option>
+                                        <option value="4">Более 3000 руб</option>
+                                    </select>
+                                </label>
+                                <button class="form__button form__button--calculation" type="button" data-step-id="step-2">
+                                    <svg width="19" height="16">
+                                        <use xlink:href="svg/sprite.svg#form-btn"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__box form__box--disabled form__box--dis-mob form__box--top-position" id="step-2">
+                        <div class="form__title"><span>2</span>Результат расчета</div>
+                        <div class="form__content">
+                            <label class="form__item" style="gap: 2.5px;">
+                                <span class="form__label-text">Имя</span>
+                                <p style="height: 0;"></p>
+                                <input class="form__input" id="form__input--name" type="text" placeholder="Ваше имя" autocomplete="off">
+                            </label>
+                            <label class="form__item">
+                                <span form__label-text>Где получить результат</span>
+                                <div class="form__out-message">
+                                    <input type="radio" id="form_radio1" name="messenger" value="phone">
+                                    <label class="form__radio-label1" for="form_radio1">
+                                        <img src="svg/sprite.svg#form-phone" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio2" name="messenger" value="sms">
+                                    <label class="form__radio-label2" for="form_radio2">
+                                        <img src="svg/sprite.svg#form-sms" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio3" name="messenger" value="telegram">
+                                    <label class="form__radio-label3" for="form_radio3">
+                                        <img src="svg/sprite.svg#form-telegram" alt="" loading="lazy" decoding="async">
+                                    </label>
+
+                                    <input type="radio" id="form_radio4" name="messenger" value="whatsapp">
+                                    <label class="form__radio-label4" for="form_radio4">
+                                        <img src="svg/sprite.svg#form-whatsapp" alt="" loading="lazy" decoding="async">
+                                    </label>
+                                </div>
+                            </label>
+                            <label class="form__item" style="gap: 2.5px;">
+                                <span form__label-text>Телефон</span>
+                                <p style="height: 0;"></p>
+                                <input class="form__input form__input--phone" id="form__input--phone" type="text" name="phone" autocomplete="off" placeholder="+375 (__) ___-__-__">
+                            </label>
+                            <div class="form__box-footer">
+                                <input class="checkbox" id="form-input-agree" type="checkbox">
+                                <label class="form__info-checkbox" for="form-input-agree">
+                                    <a href="https://creditbel.com/Politics_cfc.pdf" target="_blank">я принимаю условия
+                                        обработки персональных данных
+                                    </a>
+                                </label>
+                                <button class="form__button form__button--result" type="button" data-step-id="step-3">
+                                    <svg width="19" height="16">
+                                        <use xlink:href="svg/sprite.svg#form-btn"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="form__box-wrapper">
+                                <div class="lottie-1"></div>
+                                <p class="form__text">Введите данные кредита, для перехода к расчету</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__box form__box--disabled form__box--dis-mob form__box--top-position" id="step-3">
+                        <div class="form__title"><span>3</span>Анализ данных</div>
+                        <div class="form__content form__content--analysis">
+                            <div class="lottie-3"></div>
+                            <p class="form__text form__text--bold">Заявка отправлена</p>
+                            <p class="form__text">В ближайшее время вы получите результат</p>
+
+                            <div class="form__box-wrapper">
+                                <div class="lottie-2"></div>
+                                <p class="form__text">Чтобы узнать результат, заполните контактные данные</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="order__blur order__blur--blue"></div>
+                <div class="order__blur order__blur--pink"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__head">
+                    <a class="footer__logo logo" href="" target="_blank"><img src="images/src/logo.png" alt="site-logo"></a>
+                    <ul class="footer__social">
+                        <li>
+                            <a class="footer__link" href="https://www.tiktok.com/@center_credit" target="_blank">
+                                <svg width="40" height="40">
+                                    <use xlink:href="svg/sprite.svg#tiktok" decoding="async" loading="lazy"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://www.instagram.com/center_finance" target="_blank">
+                                <svg width="40" height="40">
+                                    <use xlink:href="svg/sprite.svg#instagram" decoding="async" loading="lazy"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://vk.com/center_finance" target="_blank">
+                                <svg width="40" height="40">
+                                    <use xlink:href="svg/sprite.svg#Vk" decoding="async" loading="lazy"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://ok.ru/centerfinance" target="_blank">
+                                <svg width="40" height="40">
+                                    <use xlink:href="svg/sprite.svg#ok" decoding="async" loading="lazy"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="footer__phone phone" href="tel:+375298883222">+375 (29) 888-32-22</a>
+                </div>
+                <div class="footer__body">cfc.by не оказывает услуг по оформлению и предоставлению населению
+                    микрозаймов, кредитов и других финансовых услуг, регулируемых Указом Президента №325 "О привлечении
+                    и предоставлении займов, деятельности микрофинансовых организаций". ООО «Центр финансовых
+                    консультация» (УНП 193679768, адрес: 220005, г. Минск, пр-кт Независимости, д. 58, к. 4, пом. 435
+                    (ТЦ «Московско-венский», Первомайский район г. Минска)) оставляет за собой право отправлять заявки в
+                    зависимости от территориальности и иных критериев в компании-партнеры (банки). Условия кредитования:
+                    сумма кредита — от 500 до 200 000 BYN; минимальная процентная ставка - 7,7%, максимальная процентная
+                    ставка 26,9% годовых; минимальный срок кредитования 30 дней, максимальный срок кредитования 84 мес.
+                    Примеры расчета: сумма 1500 BYN на три года, 13,7% годовых 50,54 BYN первый платеж. Итоговая
+                    переплата: 319,47 BYN. Досрочное погашение без штрафов. При неуплате в срок процентов за пользование
+                    кредитом, насчитывается пеня в размере 1% от суммы неуплаченных процентов за каждый день просрочки.
+                    Ваша заявка в зависимости от условий будет отправлена в один из следующих банков: Абсолютбанк,
+                    Альфа-Банк, Белагропромбанк, АСБ Беларусбанк, Банк БелВЭБ, Белгазпромбанк, Белинвестбанк, Банк
+                    Дабрабыт, Банк Решение, БНБ-Банк, Сбер Банк, БТА Банк, Банк ВТБ (Беларусь), МТБанк, БСБ Банк,
+                    Паритетбанк, Приорбанк, РРБ-Банк, СтатусБанк, Технобанк, Франсабанк, Цептер Банк. Узнать подробности
+                    вы можете по телефону +375 (29) 888-3-222. Компания вправе взымать комиссию за свои услуги.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script async src="js/script.min.js"></script>
+</body>
+
+</html>

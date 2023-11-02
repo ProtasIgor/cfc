@@ -1,3 +1,10 @@
+.form {
+    #step-3 &__content > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+}
 .form__input {
     border: 2px solid #fff;
     transition: all 1s ease-out;
@@ -39,8 +46,6 @@
 .form__info-checkbox::after {
     content: 'Подтвердите своё согласие с политикой конфиденциальности';
     padding: 4px 5%;
-
-    top: 70px;
     border-radius: 15px;
     width: 250px;
 }

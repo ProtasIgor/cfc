@@ -25,6 +25,23 @@ const lottie3 = lottie.loadAnimation({
     path: './images/src/NBafdsPXVq.json'
 });
 
+const lottie_err = lottie.loadAnimation({
+    container: document.querySelector('.lottie-err'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: './images/src/animation_loe66dsi.json'
+});
+
+const lottie_wait = lottie.loadAnimation({
+    container: document.querySelector('.lottie-waiting'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: './images/src/animation_loehp1cy.json'
+});
+
+
 setTimeout(() => {
     lottie1.play();
 }, 2000);
@@ -49,4 +66,6 @@ export default {
     'lottie1': lottie1,
     'lottie2': lottie2,
     'lottie3': lottie3,
+    'lottie_err': lottie_err,
+    'lottie_wait': lottie_wait,
 };

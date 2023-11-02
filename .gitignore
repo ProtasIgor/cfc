@@ -1,4 +1,9 @@
 node_modules
+.idea
+.gitignore
+cache
+backup
+tmp
 
 build/images/*
 !build/images/src
