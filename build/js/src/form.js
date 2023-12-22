@@ -2,7 +2,12 @@ import lottie from "./lottie";
 const buttons = document.querySelectorAll('.form__button');
 const form = document.querySelector('.form');
 const sendFormData = async () => {
-    let data = JSON.stringify(Object.fromEntries(new FormData(form)));
+    console.log('data');
+    let formData = new FormData(form);
+    let summ = formData.get('credit-sum');
+    formData.set('credit-sum', summ.replace(/[^0-9]/g, ''));
+    let data = JSON.stringify(Object.fromEntries(formData));
+    console.log(data);
     await fetch(form.action, {
         method: 'POST',
         headers: {
@@ -23,6 +28,14 @@ const sendFormData = async () => {
         }
     })
 }
+
+let sumInp = document.querySelector('input[type=text][name=credit-sum]');
+sumInp.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+    if('' !== this.value) {
+        this.value = this.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+    }
+});
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {

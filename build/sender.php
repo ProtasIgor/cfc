@@ -8,7 +8,7 @@ $data = json_decode($json);
 			'PHONE' => [['VALUE' => $data->phone, 'VALUE_TYPE' => 'WORK']],
 			'NAME' => $data->name,
 			'UF_CRM_1698748356' => $data->credit_term,
-			'UF_CRM_1698750065' => $data->{"credit-sum"},
+			'UF_CRM_1703077438' => $data->{"credit-sum"},
 			'UF_CRM_1698751839' => $data->work_term,
 			'UF_CRM_1698753182' => $data->income,
 			'UF_CRM_1698765637' => $data->messenger
